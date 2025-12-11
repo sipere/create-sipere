@@ -1,0 +1,33 @@
+{
+  "name": "create-sipere",
+  "version": "0.9.0",
+  "main": "create-sipere.js",
+  "bin": {
+    "create-sipere": "create-sipere.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "express",
+    "generator"
+  ],
+  "author": "Sallai András",
+  "license": "MIT",
+  "description": "Backend framework for Express",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sipere/create-sipere.git"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "execa": "^9.6.0",
+    "fs-extra": "^11.3.2",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "chai": "^6.2.1",
+    "exec": "^0.2.1",
+    "mocha": "^11.7.5"
+  }
+}
