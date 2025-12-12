@@ -4,7 +4,7 @@
   "description": "Express API with simple Sequelize",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha",
+    "test": "NODE_ENV=test mocha --file test/mocha.setup.js 'test/**/*.spec.js'",
     "dev": "nodemon app",
     "start": "node app"
   },

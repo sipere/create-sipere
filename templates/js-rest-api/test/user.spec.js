@@ -5,8 +5,8 @@ describe('/api/register and /api/login', () => {
     const restype= 'application/json; charset=utf-8'
     var token = null
 
-    it('post /register ', function(done) {
-      supertest(app)
+    it('post /register ', async () => {
+      await supertest(app)
         .post('/api/register')
         .set('Accept', 'application/json')
         .send({
@@ -16,11 +16,11 @@ describe('/api/register and /api/login', () => {
             password_confirmation: 'titok'
         })
         .expect('Content-Type', restype)
-        .expect(201, done)
+        .expect(201)
 
     })
-    it('post /login ', (done) => {
-      supertest(app)
+    it('post /login ', async () => {
+      const res = await supertest(app)
         .post('/api/login')
         .set('Accept', 'application/json')
         .send({
@@ -28,16 +28,17 @@ describe('/api/register and /api/login', () => {
             password: 'titok'
         })
         .expect('Content-Type', restype)
-        .expect(200, done)
-        .expect(res => {
-          token = res.body.accessToken
-        })
+        .expect(200)
+        token = res.body.accessToken
+        if(!token) {
+          throw new Error('No token')
+        }        
     })
-    it('get /users ', function(done) {
-      supertest(app)
+    it('get /users ', async () => {
+      await supertest(app)
         .get('/api/users')
         .set('Accept', 'application/json')
         .set('Authorization', 'Bearer ' + token)
-        .expect(200, done)
+        .expect(200)
     })
   })

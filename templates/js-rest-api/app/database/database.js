@@ -1,11 +1,7 @@
 import Sequelize from 'sequelize'
 import dotenvFlow from 'dotenv-flow'
 
-if (process.env.NODE_ENV === 'test') {
-    dotenvFlow.config({ path: '.env.test' })
-}else {
-    dotenvFlow.config()    
-}
+dotenvFlow.config()
 
 const sequelize = new Sequelize(
     process.env.DB_NAME,
