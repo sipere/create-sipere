@@ -1,6 +1,6 @@
 {
   "name": "create-sipere",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "create-sipere.js",
   "bin": {
     "create-sipere": "create-sipere.js"
