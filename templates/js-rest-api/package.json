@@ -15,7 +15,7 @@
   "author": "your name",
   "license": "ISC",
   "dependencies": {
-    "@sipere/op-cli": "^0.9.4",
+    "@sipere/op-cli": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv-flow": "^4.1.0",
