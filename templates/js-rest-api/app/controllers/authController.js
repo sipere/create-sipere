@@ -1,8 +1,8 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import User from '../models/user.js'
-import dotenv from '@dotenvx/dotenvx'
-dotenv.config({ quiet: true })
+import dotenvFlow from 'dotenv-flow'
+dotenvFlow.config() 
 
 const AuthController = {
     async register(req, res) {        
