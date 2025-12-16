@@ -1,6 +1,6 @@
 {
   "name": "create-sipere",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "create-sipere.js",
   "bin": {
     "create-sipere": "create-sipere.js"
@@ -19,6 +19,7 @@
     "type": "git",
     "url": "https://github.com/sipere/create-sipere.git"
   },
+  "homepage": "https://sipere.github.io/sipere/",
   "dependencies": {
     "commander": "^14.0.2",
     "execa": "^9.6.0",
