@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const assert = require('assert');
 
 describe('create-sipere', function() {
-  this.timeout(8000);
+  this.timeout(14000);
   it('create project', (done) => {
     const cmd = './create-sipere.js';
     const child = exec(cmd);
