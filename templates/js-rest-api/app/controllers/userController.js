@@ -123,6 +123,28 @@ const UserController = {
             success: true,
             data: user
         })
+    },
+    async destroy(req, res) {
+        try {
+            await UserController.tryDestroy(req, res)
+        }catch(error) {
+            res.status(500)
+            res.json({
+                success: false,
+                message: 'Error! The query is failed!',
+                error: error.message
+            })
+        }
+    },
+    async tryDestroy(req, res) {
+        const user = await User.destroy({
+            where: { id: req.params.id }
+        })
+        res.status(200)
+        res.json({
+            success: true,
+            data: user
+        })
     }
 }
 

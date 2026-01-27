@@ -10,5 +10,6 @@ router.post('/login', AuthController.login)
 router.get('/users', [verifyToken], UserController.index)
 router.get('/users/:id', [verifyToken], UserController.show)
 router.put('/users/:id/password', [verifyToken], UserController.updatePassword)
+router.delete('/users/:id', [verifyToken], UserController.destroy)
 
 export default router
